@@ -35,22 +35,19 @@ const tabChangeHandler = (newTabId) => {
 
 const frames = {
   "settings": {
-    "name": "Settings",
+    "name": "General",
     "element": (
       <span>
         <SettingGroup name="Navigation">
           <Setting name="Search" setting="search" description="Search through your courses anywhere on Canvas." />
-          <Setting name="Smart Scrolling" setting="smartscroll" description="Adds scroll to bottom and back to top buttons." />
-          <Setting name="Speed Boost" setting="quicklink" description="Improve loading speeds by preloading links. May cause 403 Forbidden errors." />
-        </SettingGroup>
-        <SettingGroup name="Other">
-          <Setting name="Rounder Modules" setting="roundermodules" description="Give the modules page a rounder appearance." />
-          <Setting name="Quick Inbox" setting="convopeeker" description="View your emails without opening a new page, just click the inbox button." />
+          <Setting name="Smart Scrolling" setting="smartscroll" description="Add buttons to jump to the bottom and top of pages." />
+          <Setting name="Quick Inbox" setting="convopeeker" description="Click the Inbox button to quickly view your inbox without having to visit the page." />
+          <Setting name="Faster Links" setting="quicklink" description="Improve loading speeds by preloading links. (May cause 403 Forbidden errors.)" />
         </SettingGroup>
       </span>
     )
   }, "display": {
-    "name": "Display",
+    "name": "Color Scheme",
     "element": (
       <span>
         <div className="center">
@@ -81,15 +78,16 @@ const frames = {
           ]}></AppearanceSelector>
         </div>
         <SettingGroup name="Sidebar">
+          <Setting name="Hide Logo" setting="hidelogo" description="Hide the logo on the top of the sidebar." />
           <Setting name="Background Color" setting="sidebar-color" description="Change the background color of the sidebar." defaultValue="#1b7ecf" customInput={(state, setState) => { return <SidebarBackgroundColorPicker state={state} setState={setState} />}}/>
-          <Setting name="Active Background Color" setting="active-sidebar-color" description="Change the background color of the active sidebar button."  defaultValue={{'background': 'darker', 'icon': 'white'}} customInput={(state, setState) => { return <ActiveSidebarColorSwitch state={state} setState={setState}/> }} />
-          <Setting name="Icon Color" setting="sidebar-icon-color" description="Change the icon color of the sidebar." defaultValue="white" customInput={(state, setState) => { return <LimitedColorSwitch state={state} setState={setState} generateTooltip={(color) => {if(color === "unset") {return <><b>Default Icons</b><p>Sidebar icons will inherit the default colors of your school.</p></>;} else if(["black","white"].includes(color)) {return <><b>{ color.charAt(0).toUpperCase() + color.slice(1) } Icons</b><p>Sidebar icons will always appear in { color }.</p></>} else {return <><b>Custom Icons</b><p>Click to open a color wheel and chose a custom icon color.</p></>;}}}/> }} />
+          <Setting name="Icon Color" setting="sidebar-icon-color" description="Change the icon color of the sidebar tabs." defaultValue="white" customInput={(state, setState) => { return <LimitedColorSwitch state={state} setState={setState} generateTooltip={(color) => {if(color === "unset") {return <><b>Default Icons</b><p>Sidebar icons will inherit the default colors of your school.</p></>;} else if(["black","white"].includes(color)) {return <><b>{ color.charAt(0).toUpperCase() + color.slice(1) } Icons</b><p>Sidebar icons will always appear in { color }.</p></>} else {return <><b>Custom Icons</b><p>Click to open a color wheel and chose a custom icon color.</p></>;}}}/> }} />
+          <Setting name="Active Tab Color" setting="active-sidebar-color" description="Change the background and icon color of the active sidebar tab."  defaultValue={{'background': 'darker', 'icon': 'white'}} customInput={(state, setState) => { return <ActiveSidebarColorSwitch state={state} setState={setState}/> }} />
           <Setting name="Smaller Icons" setting="sidebar-smaller-icons" description="Decrease the size of sidebar icons." />
           <Setting name="More Spacing" setting="sidebar-more-spacing" description="Increase the spacing between sidebar icons." />
         </SettingGroup>
-        <SettingGroup name="Other">
+        <SettingGroup name="Miscellaneous">
           <Setting name="Link Color" setting="linkcolor" description="Change the color of links on Canvas." defaultValue="" customInput={(state, setState) => { return <ColorSwitch state={state} setState={setState} />}}/>
-          <Setting name="Hide Logo" setting="hidelogo" description="Hide the logo on the top of the sidebar and todo." />
+          <Setting name="Rounder Modules" setting="roundermodules" description="Tweak modules in the Modules page to be slightly rounder in appearance." />
         </SettingGroup>
       </span>
     )
