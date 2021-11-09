@@ -1,5 +1,5 @@
 # Canvas+ Emoji Guide
-It's very helpful to have commit messages with emojis. People viewing or working on the extension can easily see what a commit is about with emojis. Obviously you don't have to use emojis in commit messages, but I recommend it, and if you do use emojis, I ask that you use this format.
+It's very helpful to have commit messages with emojis. People viewing or working on the extension can easily see what a commit is about with emojis. Obviously, you don't have to use emojis in commit messages, but I recommend it, and if you do use emojis, I ask that you use this format.
 
 Based on [gitmoji](https://gitmoji.carloscuesta.me/), tailored for Canvas+
 
@@ -14,14 +14,14 @@ Based on [gitmoji](https://gitmoji.carloscuesta.me/), tailored for Canvas+
 |Documentation|:books: `:books:`|
 |Edit popup|:gear: `:gear:`|
 |Edit color modes|:lipstick: `:lipstick:`|
-|Add website content|:pencil2: `:pencil2`|
+|Add website content|:pencil2: `:pencil2:`|
 |Change backend jekyll|:test_tube: `:test_tube:`|
-|Release|:ribbon: `:ribbon`|
+|Release|:ribbon: `:ribbon:`|
 |Something else|Be creative!|
 
 <br><br>
 ### Add an extra emoji to non-chrome browsers:
-If a commit makes changes to another browser, add a second emoji. If you're editing multiple browsers, you can put multiple. If you're editing multiple browsers **including chrome**, no need to use an emoji. I'd recommend seperating commits by browsers, though.
+If a commit makes changes to another browser, add a second emoji. If you're editing multiple browsers, you can put multiple. If you're editing multiple browsers, **including chrome**, there's no need to use an emoji. I'd recommend seperating commits by browsers, though.
 
 |Browser|Emoji|
 |:-|:-
