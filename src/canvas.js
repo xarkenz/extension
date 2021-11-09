@@ -53,7 +53,7 @@ const createFinishSettingUp = (selectedAppearance) => {
   popup.innerHTML = `
     <div class='canvasplus-finish-setting-up'>
       <h3 class='canvasplus-finish-setting-up__Header'>Finish Setting Up</h3>
-      <div class='canvasplus-finish-setting-up__DisplayHeader'>Chose a Look</div>
+      <div class='canvasplus-finish-setting-up__DisplayHeader'>Choose a Look</div>
       <div class='canvasplus-finish-setting-up__DisplayWrapper'>
         <div class='canvasplus-finish-setting-up__DisplayOption light ${!['dim','dark'].includes(selectedAppearance) ? 'selected' : ''}'>
           <img src='${ chrome.extension.getURL('assets/img/light.png') }' />
